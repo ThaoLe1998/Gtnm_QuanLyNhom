@@ -1,0 +1,97 @@
+
+.row{
+    height: 500px;
+    background-repeat: no-repeat;
+    margin: 5% ;
+    margin-bottom: 1% !important;
+
+}
+
+body{
+    margin: 0;
+}
+#phai, #phai1{
+    background-color: rgba(244, 248, 244,0.7) !important;
+height: 500px;
+color: #000;
+padding-left: 10%;
+}
+
+#trai{
+    color: white;
+    height: 500px;
+}
+#trai h1{
+padding-top: 65%;
+}
+#trai h1, #trai h5{
+text-align: center;
+
+}
+
+#phai h1{
+    text-align: center;
+    padding-bottom: 30px; 
+    padding-top: 50px; 
+    color: rgb(27, 6, 77);
+    padding-right: 10%;
+}
+
+#phai1 h1{
+    text-align: center;
+    padding-bottom: 30px; 
+    padding-top: 30px; 
+    color: rgb(27, 6, 77);
+    padding-right: 10%;
+}
+
+.a1 {
+    padding-bottom: 20px;
+    width: 90%;
+}
+ 
+.a2{
+    width: 90%;
+    padding-bottom: 20px;  
+}
+.a1 input, .a2 input{
+    height: 50px;
+}
+
+#phai h4 a{
+    color: red;
+    
+}
+
+.a3{
+    width: 120px;
+    background: rgb(43, 99, 71);
+    font-size: 20px;
+    color: #fff;
+    border-radius: 30px !important;
+}
+
+.a3:hover{
+    background: rgb(1, 17, 1);
+    color: #fff;
+ 
+}
+
+.input-group-addon{
+    background: rgb(43, 99, 71) !important;
+    color: #fff;
+}
+
+.input-group-btn1{
+    padding-left: 63%;
+}
+
+.navbar, .navbar-brand {
+    background: #343a4e !important;
+    color: #fff !important;
+}
+.navbar-default {
+    border-color: transparent;
+    
+}
+
