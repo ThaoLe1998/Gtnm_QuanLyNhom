@@ -1,0 +1,693 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Manages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <link href="css/manages.css" rel='stylesheet' type='text/css' />
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/aminate.css">
+
+
+    <!-- google fonts  -->
+
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <link rel="stylesheet" href="css/manages2.css">
+    <link rel="icon" href="images/logo.ico">
+</head>
+<!-- include -->
+<script>
+    function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /*loop through a collection of all HTML elements:*/
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+                /*make an HTTP request using the attribute value as the file name:*/
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                        if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                        /*remove the attribute, and call this function once more:*/
+                        elmnt.removeAttribute("w3-include-html");
+                        includeHTML();
+                    }
+                }
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                /*exit the function:*/
+                return;
+            }
+        }
+    };
+</script>
+
+<!-- end include -->
+
+<body>
+    <div class="page-container">
+
+        <!--//content-inner-->
+        <div class="left-content">
+            <div class="inner-content">
+                <div class="header-section">
+
+                    <div class="top_menu">
+                        <div class="profile_details_left">
+                            <ul class="nofitications-dropdown">
+                                <li class="dropdown note">
+                                    <a href="index.html" title="home" class="dropdown-toggle" data-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <img src="images/if_home-outline_216240.png" class="img-responsive" alt="Image">
+                                    </a>
+                                </li>
+                                <li class="dropdown note">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="email"
+                                        aria-haspopup="false" aria-expanded="false"> <img src="images/if_42-Email_2123873.png"
+                                            class="img-responsive" alt="Image">
+
+                                        <span id="button-2" class="badge bg-theme">12</span>
+
+
+                                    </a>
+                                </li>
+                                <li class="dropdown note">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="30/500 notification"
+                                        aria-expanded="false"> <img src="images/if_bell-2_430084.png" class="img-responsive"
+                                            alt="Image">
+
+                                        <span id="button-2" class="badge bg-theme">30</span>
+
+                                    </a>
+                                </li>
+                                <li class="dropdown note" onclick="myFunction()" aria-expanded="false">
+                                    <!-- <a href="login.html" title="log out" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-sign-out" title="Log out"></i></a> -->
+                                    <a href="#" class="dropdown-toggle dropbtn" data-toggle="dropdown">
+                                        <img src="images/7.jpg" class="img-responsive ur rounded-circle" alt="Image">
+                                        <!-- <b class="caret"></b> --></a>
+                                    <ul class="dropdown-menu1 " id="myDropdown">
+                                        <li class="user-header bg-img" style="background-image: url(images/user-info.jpg)"
+                                            data-overlay="3">
+                                            <div class="flexbox align-self-center">
+                                                <img src="images/7.jpg" class="float-left rounded-circle" alt="User Image">
+                                                <h4 class="user-name align-self-center">
+                                                    <span>Thao Le</span>
+                                                    <small>thaole@gmail.com</small>
+                                                </h4>
+                                            </div>
+                                        </li>
+                                        <!-- Menu Body -->
+                                        <li class="user-body">
+                                            <a class="dropdown-item" href="#"><i class="fa fa-user"></i> My Profile</a>
+                                            <a class="dropdown-item" href="#"><i class="fa fa-envelope"></i> Inbox</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Account
+                                                Setting</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="login.html"><i class="fa fa-sign-out"></i>
+                                                Logout</a>
+                                            <div class="dropdown-divider"></div>
+                                            <div class="p-10"><a href="#" class="btn btn-sm btn-rounded btn-success">View
+                                                    Profile</a></div>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="#" data-toggle="control-sidebar" title="setting"><i class="fa fa-cog fa-spin"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+
+
+                <div class="agile-login">
+                    <div class="container">
+
+                        <ol class="breadcrumb">
+                            <li>
+                                <a href="#"> <i class="fa fa-home"></i>Home</a>
+                            </li>
+                            <li class="active">User</li>
+                            <li class="active">customer</li>
+
+                        </ol>
+
+
+                        <div class="row">
+
+                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 print">
+                                <button onclick="window.print()">print</button>
+                                <button onclick="window.copy()">copy</button>
+                                <button onclick="window.copy()">excel</button>
+
+                            </div>
+
+                            <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 sr">
+
+
+                                <form class="example" action="#" style="margin:auto;max-width:500px">
+                                    <input type="text" autofocus placeholder="Search.." name="search2">
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                </form>
+
+                            </div>
+                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 add">
+                                <a>
+
+                                    <button type="button" class="btn btn-success addbtn"><i class="fa fa-plus"></i> Add</button>
+                                </a>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <!-- Tab panes -->
+
+                        <div class="tabcontent" id="bang1">
+                            <div class="table-responsive">
+
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th title="Number">Num</th>
+                                            <th title="Identification">Id</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Address</th>
+                                            <th>Phone</th>
+                                            <th>Actions</th>
+
+                                        </tr>
+
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>1</th>
+                                            <td>KH02 </td>
+                                            <td>Trần Ngọc Hân</td>
+                                            <td>ngochan@gmail.com</td>
+                                            <td>23/5 Nguyễn Trãi, Q5, Tp.HCM </td>
+                                            <td>0966705384</td>
+                                            <td><a href="#"><button class="btn btn-danger">
+                                                        <i class="glyphicon glyphicon-trash"></i>
+                                                    </button></a>
+                                                <a href="#"><button class="btn btn-primary">
+                                                        <i class="glyphicon glyphicon-edit"></i>
+                                                    </button></a>
+                                                <a href="#"><button class="btn btn-primary inf">
+                                                        <i class="glyphicon glyphicon-info-sign"></i>
+                                                    </button></a></td>
+                                        </tr>
+
+                                        <tr">
+                                            <th>2</th>
+                                            <td>KH03 </td>
+                                            <td>Trần Ngọc Linh</td>
+                                            <td>ngoclinh@gmail.com</td>
+                                            <td>45 Nguyễn Cảnh Chân, Q1, Tp.HCM </td>
+                                            <td>0966705385</td>
+                                            <td><a href="#"><button class="btn btn-danger">
+                                                        <i class="glyphicon glyphicon-trash"></i>
+                                                    </button></a>
+                                                <a href="# "><button class="btn btn-primary">
+                                                        <i class="glyphicon glyphicon-edit"></i>
+                                                    </button></a>
+                                                <a href="#"><button class="btn btn-primary inf">
+                                                        <i class="glyphicon glyphicon-info-sign"></i>
+                                                    </button></a></td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>3</th>
+                                                <td>KH04 </td>
+                                                <td>Trần Minh Long</td>
+                                                <td>minhlong@gmail.com</td>
+                                                <td>50/34 Lê Đại Hành, Q10, Tp.HCM </td>
+                                                <td>0966705386</td>
+                                                <td><a href="#"><button class="btn btn-danger">
+                                                            <i class="glyphicon glyphicon-trash"></i>
+                                                        </button></a>
+                                                <a href="#"><button class="btn btn-primary">
+                                                            <i class="glyphicon glyphicon-edit"></i>
+                                                        </button></a>
+                                                <a href="#"><button class="btn btn-primary inf">
+                                                            <i class="glyphicon glyphicon-info-sign"></i>
+                                                        </button></a></td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>4</th>
+                                                <td>KH05 </td>
+                                                <td>Lê Nhật Minh</td>
+                                                <td>nhatminh@gmail.com</td>
+                                                <td title="Số 34 Trương Định, quận 3, thành phố Hồ Chí Minh">34
+                                                    Trương Định, Q3, Tp.HCM </td>
+                                                <td>0966705388</td>
+                                                <td><a href="#"><button class="btn btn-danger">
+                                                            <i class="glyphicon glyphicon-trash"></i>
+                                                        </button></a>
+                                               <a href="#"><button class="btn btn-primary">
+                                                            <i class="glyphicon glyphicon-edit"></i>
+                                                        </button></a>
+                                                <a href="#"><button class="btn btn-primary inf">
+                                                            <i class="glyphicon glyphicon-info-sign"></i>
+                                                        </button></a></td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>5</th>
+                                                <td>KH06 </td>
+                                                <td>Lê Hoài Thương</td>
+                                                <td>hoaithuong@gmail.com</td>
+                                                <td>227 Nguyễn Văn Cừ, Q5, TpHCM </td>
+                                                <td>0966705389</td>
+                                                <td><a href="#"><button class="btn btn-danger">
+                                                            <i class="glyphicon glyphicon-trash"></i>
+                                                        </button></a>
+                                                <a href="#"><button class="btn btn-primary">
+                                                            <i class="glyphicon glyphicon-edit"></i>
+                                                        </button></a>
+                                               <a href="#"><button class="btn btn-primary inf">
+                                                            <i class="glyphicon glyphicon-info-sign"></i>
+                                                        </button></a></td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>6</th>
+                                                <td>KH07 </td>
+                                                <td>Nguyễn Văn Tâm</td>
+                                                <td>tamnguyen@gmail.com</td>
+                                                <td>32/3 Trần Bình Trọng, Q5, TpHCM </td>
+                                                <td>0966705390</td>
+                                                <td><a href="#"><button class="btn btn-danger">
+                                                            <i class="glyphicon glyphicon-trash"></i>
+                                                        </button></a>
+                                                <a href="#"><button class="btn btn-primary">
+                                                            <i class="glyphicon glyphicon-edit"> </i>
+                                                        </button></a>
+                                               <a href="#"><button class="btn btn-primary inf">
+                                                            <i class="glyphicon glyphicon-info-sign"></i>
+                                                        </button></a></td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>7</th>
+                                                <td>KH08 </td>
+                                                <td>Phan Thị Thanh</td>
+                                                <td>phanthanh@gmail.com</td>
+                                                <td>45/2 An Dương Vương, Q5, TpHCM </td>
+                                                <td>0966705391</td>
+                                                <td><a href="#"><button class="btn btn-danger">
+                                                            <i class="glyphicon glyphicon-trash"></i>
+                                                        </button></a>
+                                              <a href="#"><button class="btn btn-primary">
+                                                            <i class="glyphicon glyphicon-edit "> </i>
+                                                        </button></a>
+                                                <a href="#"><button class="btn btn-primary inf">
+                                                            <i class="glyphicon glyphicon-info-sign"></i>
+                                                        </button></a></td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>8</th>
+                                                <td>KH09 </td>
+                                                <td>Lê Hà Vinh</td>
+                                                <td>havinh@gmail.com</td>
+                                                <td>873 Lê Hồng Phong, Q5, TpHCM </td>
+                                                <td>0966705392</td>
+                                                <td><a href="#"><button class="btn btn-danger">
+                                                            <i class="glyphicon glyphicon-trash"></i>
+                                                        </button></a>
+                                                <a href="#"><button class="btn btn-primary">
+                                                            <i class="glyphicon glyphicon-edit"> </i>
+                                                        </button></a>
+                                                <a href="#"><button class="btn btn-primary inf">
+                                                            <i class="glyphicon glyphicon-info-sign"></i>
+                                                        </button></a></td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>9</th>
+                                                <td>KH10 </td>
+                                                <td>Lê Duy Mạnh</td>
+                                                <td>duymanh@gmail.com</td>
+                                                <td>34/34B Nguyễn Trãi, Q1, TpHCM </td>
+                                                <td>0966705393</td>
+                                                <td><a href="#"><button class="btn btn-danger">
+                                                            <i class="glyphicon glyphicon-trash"></i>
+                                                        </button></a>
+                                                    <a href="#"><button class="btn btn-primary">
+                                                            <i class="glyphicon glyphicon-edit"> </i>
+                                                        </button></a>
+                                                    <a href="#"><button class="btn btn-primary inf">
+                                                            <i class="glyphicon glyphicon-info-sign"></i>
+                                                        </button></a></td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>10</th>
+                                                <td>KH11 </td>
+                                                <td>Hà Duy Lập</td>
+                                                <td>duylap@gmail.com</td>
+                                                <td>730 Trần Hưng Đạo, Q5, TpHCM </td>
+                                                <td>0966705394</td>
+                                                <td><a href="#"><button class="btn btn-danger">
+                                                            <i class="glyphicon glyphicon-trash"></i>
+                                                        </button></a>
+                                              <a href="#"><button class="btn btn-primary">
+                                                            <i class="glyphicon glyphicon-edit"> </i>
+                                                        </button></a>
+                                               <a href="#"><button class="btn btn-primary inf">
+                                                            <i class="glyphicon glyphicon-info-sign"></i>
+                                                        </button></a></td>
+                                            </tr>
+
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tabcontent" id="bang2">
+                            <div class="table-responsive">
+
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th title="Number">Num</th>
+                                            <th>Id</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Address</th>
+                                            <th>Phone</th>
+                                            <th>Delete</th>
+                                            <th>Edit</th>
+                                        </tr>
+
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>11</th>
+                                            <td>KH11 </td>
+                                            <td>Trần Ngọc Hân</td>
+                                            <td>ngochan@gmail.com</td>
+                                            <td>23/5 Nguyễn Trãi, Q5, Tp.HCM </td>
+                                            <td>0966705384</td>
+                                            <td><a href="#"><button class="btn btn-danger">
+                                                        <i class="glyphicon glyphicon-trash"></i>
+                                                    </button></a></td>
+                                            <td><a href="#"><button class="btn btn-primary">
+                                                        <i class="glyphicon glyphicon-edit"></i>
+                                                    </button></a></td>
+                                        </tr>
+
+                                        <tr">
+                                            <th>12</th>
+                                            <td>KH12 </td>
+                                            <td>Trần Ngọc Linh</td>
+                                            <td>ngoclinh@gmail.com</td>
+                                            <td>45 Nguyễn Cảnh Chân, Q1, Tp.HCM </td>
+                                            <td>0966705385</td>
+                                            <td><a href="#"><button class="btn btn-danger">
+                                                        <i class="glyphicon glyphicon-trash"></i>
+                                                    </button></a></td>
+                                            <td><a href="#"><button class="btn btn-primary">
+                                                        <i class="glyphicon glyphicon-edit"></i>
+                                                    </button></a></td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>13</th>
+                                                <td>KH13 </td>
+                                                <td>Trần Minh Long</td>
+                                                <td>minhlong@gmail.com</td>
+                                                <td>50/34 Lê Đại Hành, Q10, Tp.HCM </td>
+                                                <td>0966705386</td>
+                                                <td><a href="#"><button class="btn btn-danger">
+                                                            <i class="glyphicon glyphicon-trash"></i>
+                                                        </button></a></td>
+                                                <td><a href="#"><button class="btn btn-primary">
+                                                            <i class="glyphicon glyphicon-edit"></i>
+                                                        </button></a></td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>14</th>
+                                                <td>KH14 </td>
+                                                <td>Lê Nhật Minh</td>
+                                                <td>nhatminh@gmail.com</td>
+                                                <td title="Số 34 Trương Định, quận 3, thành phố Hồ Chí Minh">34
+                                                    Trương Định, Q3, Tp.HCM </td>
+                                                <td>0966705388</td>
+                                                <td><a href="#"><button class="btn btn-danger">
+                                                            <i class="glyphicon glyphicon-trash"></i>
+                                                        </button></a></td>
+                                                <td><a href="#"><button class="btn btn-primary">
+                                                            <i class="glyphicon glyphicon-edit"></i>
+                                                        </button></a></td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>15</th>
+                                                <td>KH15 </td>
+                                                <td>Lê Hoài Thương</td>
+                                                <td>hoaithuong@gmail.com</td>
+                                                <td>227 Nguyễn Văn Cừ, Q5, TpHCM </td>
+                                                <td>0966705389</td>
+                                                <td><a href="#"><button class="btn btn-danger">
+                                                            <i class="glyphicon glyphicon-trash"></i>
+                                                        </button></a></td>
+                                                <td><a href="#"><button class="btn btn-primary">
+                                                            <i class="glyphicon glyphicon-edit"></i>
+                                                        </button></a></td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>16</th>
+                                                <td>KH16 </td>
+                                                <td>Nguyễn Văn Tâm</td>
+                                                <td>tamnguyen@gmail.com</td>
+                                                <td>32/3 Trần Bình Trọng, Q5, TpHCM </td>
+                                                <td>0966705390</td>
+                                                <td><a href="#"><button class="btn btn-danger">
+                                                            <i class="glyphicon glyphicon-trash"></i>
+                                                        </button></a></td>
+                                                <td><a href="#"><button class="btn btn-primary">
+                                                            <i class="glyphicon glyphicon-edit"> </i>
+                                                        </button></a></td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>17</th>
+                                                <td>KH17 </td>
+                                                <td>Phan Thị Thanh</td>
+                                                <td>phanthanh@gmail.com</td>
+                                                <td>45/2 An Dương Vương, Q5, TpHCM </td>
+                                                <td>0966705391</td>
+                                                <td><a href="#"><button class="btn btn-danger">
+                                                            <i class="glyphicon glyphicon-trash"></i>
+                                                        </button></a></td>
+                                                <td><a href="#"><button class="btn btn-primary">
+                                                            <i class="glyphicon glyphicon-edit"> </i>
+                                                        </button></a></td>
+                                            </tr>
+                                            <tr>
+                                                <th>18</th>
+                                                <td>KH18 </td>
+                                                <td>Phan Thị Thanh</td>
+                                                <td>phanthanh@gmail.com</td>
+                                                <td>45/2 An Dương Vương, Q5, TpHCM </td>
+                                                <td>0966705391</td>
+                                                <td><a href="#"><button class="btn btn-danger">
+                                                            <i class="glyphicon glyphicon-trash"></i>
+                                                        </button></a></td>
+                                                <td><a href="#"><button class="btn btn-primary">
+                                                            <i class="glyphicon glyphicon-edit"> </i>
+                                                        </button></a></td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>19</th>
+                                                <td>KH19 </td>
+                                                <td>Phan Thị Thanh</td>
+                                                <td>phanthanh@gmail.com</td>
+                                                <td>45/2 An Dương Vương, Q5, TpHCM </td>
+                                                <td>0966705391</td>
+                                                <td><a href="#"><button class="btn btn-danger">
+                                                            <i class="glyphicon glyphicon-trash"></i>
+                                                        </button></a></td>
+                                                <td><a href="#"><button class="btn btn-primary">
+                                                            <i class="glyphicon glyphicon-edit"> </i>
+                                                        </button></a></td>
+                                            </tr>
+
+
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+
+
+
+                        <!-- Nav tabs -->
+                        <ul class="pagination " style="float: right;">
+                            <li><a href="#">&laquo;</a></li>
+                            <li><a lass="tablinks" onclick="openCity(event, 'bang1')" id="defaultOpen">1</a></li>
+                            <li><a class="tablinks" onclick="openCity(event, 'bang2')">2</a></li>
+                            <li><a href="#">&raquo;</a></li>
+                        </ul>
+                        <!-- end Nav tabs -->
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <!--//content-inner-->
+
+        <!--sidebar-menu-->
+        <div class="sidebar-menu">
+            <header class="logo">
+                <a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span>
+                </a> <a href="#" style="text-decoration: none;"> <span id="logo">
+                        <h1>Admin</h1>
+                    </span>
+                </a>
+            </header>
+            <div style="border-top: 1px solid rgba(69, 74, 84, 0.7)"></div>
+            <!--/down-->
+            <div class="down">
+                <center> <a href="#">
+                        <img src="images/download.png" class="img-responsive" alt="Image">
+                    </a></center> <a href="#" style="text-decoration: none;"><span class=" name-caret"> </span></a>
+                <p></p>
+                <ul>
+                    <li><a class="tooltips" href="#"><span>Profile</span><i class="lnr lnr-user"></i></a></li>
+                    <li><a class="tooltips" href="#"><span>Settings</span><i class="lnr lnr-cog"></i></a></li>
+                    <li><a class="tooltips" href="login.html" title="Log out"><span>Log out</span><i class="lnr lnr-power-switch"></i></a></li>
+                </ul>
+            </div>
+            <!--//down-->
+
+
+            <!--menu-->
+            <div class="menu">
+                <ul id="menu">
+                    <li><a href="#" style="text-decoration: none;"><i class="fa fa-ticket"></i> <span>Tickets</span></a></li>
+                    <li><a href="#" style="text-decoration: none;"><i class="fa fa-book"></i> <span>
+                                statistic</span></a></li>
+                    <li><a href="#" style="text-decoration: none;"><i class="fa fa-table"></i> <span>Equipment</span></a></li>
+                    <li><a href="#" style="text-decoration: none;"> <span> <i class="fa fa-user"></i>User</span> <span
+                                class="fa fa-angle-right" style="float: right"></span></a>
+                        <ul>
+                            <li><a href="customer.html"><i class="lnr lnr-map"></i> Customer</a></li>
+                            <li><a href="employee.html"><i class="lnr lnr-apartment"></i> Employee
+                                </a></li>
+                        </ul>
+                    </li>
+                    <li><span><a style="text-decoration: none;" href="https://hci2018group10.azurewebsites.net"> <i
+                                    class="fa fa-users"></i><span>Group page</span></a></span></li>
+
+                </ul>
+            </div>
+            <!--//menu-->
+
+        </div>
+        <!--//sidebar-menu-->
+
+        <div class="clearfix"></div>
+    </div>
+
+
+    <script>
+        var toggle = true;
+
+        $(".sidebar-icon").click(function () {
+            if (toggle) {
+                $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+                $("#menu span").css({ "position": "absolute" });
+            } else {
+                $(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+                setTimeout(function () {
+                    $("#menu span").css({ "position": "relative" });
+                }, 400);
+            }
+
+            toggle = !toggle;
+        });
+    </script>
+
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+
+                var dropdowns = document.getElementsByClassName("dropdown-menu1");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+    <!-- <script>
+    includeHTML();
+    </script> -->
+
+</body>
+
+</html>
