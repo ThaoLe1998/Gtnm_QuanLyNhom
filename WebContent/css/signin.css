@@ -1,0 +1,25 @@
+.mainspan{
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+.span img {
+    background:#354F88;
+    padding: 7px;
+    float: left;
+    margin-right: 90px; 
+}
+
+.span1 img {
+    background: #8538AD;
+    padding: 7px;
+    float: left;
+    margin-right: 90px;
+}
+
+
+.span2 img {
+    background: #CE3E26;
+    padding: 7px;
+    float: left;
+}
+
