@@ -10,6 +10,8 @@
     <link href="css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/aminate.css">
+    <link rel="stylesheet" href="css/addEditDelete.css">
+
 
 
     <!-- google fonts  -->
@@ -121,7 +123,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="#" data-toggle="control-sidebar" title="setting"><i class="fa fa-cog fa-spin"></i></a>
+                                    <a href="#" data-toggle="control-sidebar" onclick="w3_open()" title="setting"><i class="fa fa-cog fa-spin"></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -166,7 +168,7 @@
                             <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 add">
                                 <a>
 
-                                    <button type="button" class="btn btn-success addbtn"><i class="fa fa-plus"></i> Add</button>
+                                    <button type="button" class="btn btn-success addbtn" id="btn" ><i class="fa fa-plus"></i> Add</button>
                                 </a>
                             </div>
                         </div>
@@ -198,14 +200,14 @@
                                         <tr>
                                             <th>1</th>
                                             <td>KH01 </td>
-                                            <td>Nguyễn Thị Ngọc</td>
-                                            <td>ngocnguyen@gmail.com</td>
+                                            <td>Trần Ngọc Hân</td>
+                                            <td>ngochan@gmail.com</td>
                                             <td>23/5 Nguyễn Trãi, Q5, Tp.HCM </td>
                                             <td>0966705384</td>
-                                            <td><a href="#"><button class="btn btn-danger">
+                                            <td><a href="#" onclick="openForm()"><button class="btn btn-danger">
                                                         <i class="glyphicon glyphicon-trash"></i>
                                                     </button></a>
-                                                <a href="#"><button class="btn btn-primary">
+                                                <a href="#" onclick="openFormE()"><button class="btn btn-primary">
                                                         <i class="glyphicon glyphicon-edit"></i>
                                                     </button></a>
                                                 <a href="#"><button class="btn btn-primary inf">
@@ -213,17 +215,17 @@
                                                     </button></a></td>
                                         </tr>
 
-                                        <tr>
+                                        <tr">
                                             <th>2</th>
                                             <td>KH02 </td>
-                                            <td>Trần Ngọc Linh Chi</td>
-                                            <td>linhchi@gmail.com</td>
+                                            <td>Trần Ngọc Linh</td>
+                                            <td>ngoclinh@gmail.com</td>
                                             <td>45 Nguyễn Cảnh Chân, Q1, Tp.HCM </td>
                                             <td>0966705385</td>
-                                            <td><a href="#"><button class="btn btn-danger">
+                                            <td><a href="#" onclick="openForm()"><button class="btn btn-danger">
                                                         <i class="glyphicon glyphicon-trash"></i>
                                                     </button></a>
-                                                <a href="# "><button class="btn btn-primary">
+                                                <a href="# " onclick="openFormE()"><button class="btn btn-primary">
                                                         <i class="glyphicon glyphicon-edit"></i>
                                                     </button></a>
                                                 <a href="#"><button class="btn btn-primary inf">
@@ -234,14 +236,14 @@
                                             <tr>
                                                 <th>3</th>
                                                 <td>KH03 </td>
-                                                <td>Trần Minh Hùng</td>
-                                                <td>minhhung@gmail.com</td>
+                                                <td>Trần Minh Long</td>
+                                                <td>minhlong@gmail.com</td>
                                                 <td>50/34 Lê Đại Hành, Q10, Tp.HCM </td>
                                                 <td>0966705386</td>
-                                                <td><a href="#"><button class="btn btn-danger">
+                                                <td><a href="#" onclick="openForm()"><button class="btn btn-danger">
                                                             <i class="glyphicon glyphicon-trash"></i>
                                                         </button></a>
-                                                    <a href="#"><button class="btn btn-primary">
+                                                    <a href="#" onclick="openFormE()"><button class="btn btn-primary">
                                                             <i class="glyphicon glyphicon-edit"></i>
                                                         </button></a>
                                                     <a href="#"><button class="btn btn-primary inf">
@@ -252,15 +254,15 @@
                                             <tr>
                                                 <th>4</th>
                                                 <td>KH04 </td>
-                                                <td>Lê Nhật Hoàng</td>
-                                                <td>nhathoang@gmail.com</td>
+                                                <td>Lê Nhật Minh</td>
+                                                <td>nhatminh@gmail.com</td>
                                                 <td title="Số 34 Trương Định, quận 3, thành phố Hồ Chí Minh">34
                                                     Trương Định, Q3, Tp.HCM </td>
                                                 <td>0966705388</td>
-                                                <td><a href="#"><button class="btn btn-danger">
+                                                <td><a href="#" onclick="openForm()"><button class="btn btn-danger">
                                                             <i class="glyphicon glyphicon-trash"></i>
                                                         </button></a>
-                                                    <a href="#"><button class="btn btn-primary">
+                                                    <a href="#" onclick="openFormE()"><button class="btn btn-primary">
                                                             <i class="glyphicon glyphicon-edit"></i>
                                                         </button></a>
                                                     <a href="#"><button class="btn btn-primary inf">
@@ -271,14 +273,14 @@
                                             <tr>
                                                 <th>5</th>
                                                 <td>KH05 </td>
-                                                <td>Lê Hoài Lâm</td>
-                                                <td>hoailam@gmail.com</td>
+                                                <td>Lê Hoài Thương</td>
+                                                <td>hoaithuong@gmail.com</td>
                                                 <td>227 Nguyễn Văn Cừ, Q5, TpHCM </td>
                                                 <td>0966705389</td>
-                                                <td><a href="#"><button class="btn btn-danger">
+                                                <td><a href="#" onclick="openForm()"><button class="btn btn-danger">
                                                             <i class="glyphicon glyphicon-trash"></i>
                                                         </button></a>
-                                                    <a href="#"><button class="btn btn-primary">
+                                                    <a href="#" onclick="openFormE()"><button class="btn btn-primary">
                                                             <i class="glyphicon glyphicon-edit"></i>
                                                         </button></a>
                                                     <a href="#"><button class="btn btn-primary inf">
@@ -289,14 +291,14 @@
                                             <tr>
                                                 <th>6</th>
                                                 <td>KH06 </td>
-                                                <td>Nguyễn Văn Bình</td>
-                                                <td>binhnguyen@gmail.com</td>
+                                                <td>Nguyễn Văn Tâm</td>
+                                                <td>tamnguyen@gmail.com</td>
                                                 <td>32/3 Trần Bình Trọng, Q5, TpHCM </td>
                                                 <td>0966705390</td>
-                                                <td><a href="#"><button class="btn btn-danger">
+                                                <td><a href="#" onclick="openForm()"><button class="btn btn-danger">
                                                             <i class="glyphicon glyphicon-trash"></i>
                                                         </button></a>
-                                                    <a href="#"><button class="btn btn-primary">
+                                                    <a href="#" onclick="openFormE()"><button class="btn btn-primary">
                                                             <i class="glyphicon glyphicon-edit"> </i>
                                                         </button></a>
                                                     <a href="#"><button class="btn btn-primary inf">
@@ -307,14 +309,14 @@
                                             <tr>
                                                 <th>7</th>
                                                 <td>KH07 </td>
-                                                <td>Phan Thị Thanh Truc</td>
-                                                <td>phanttruc@gmail.com</td>
+                                                <td>Phan Thị Thanh</td>
+                                                <td>phanthanh@gmail.com</td>
                                                 <td>45/2 An Dương Vương, Q5, TpHCM </td>
                                                 <td>0966705391</td>
-                                                <td><a href="#"><button class="btn btn-danger">
+                                                <td><a href="#" onclick="openForm()"><button class="btn btn-danger">
                                                             <i class="glyphicon glyphicon-trash"></i>
                                                         </button></a>
-                                                    <a href="#"><button class="btn btn-primary">
+                                                    <a href="#" onclick="openFormE()"><button class="btn btn-primary">
                                                             <i class="glyphicon glyphicon-edit "> </i>
                                                         </button></a>
                                                     <a href="#"><button class="btn btn-primary inf">
@@ -325,14 +327,14 @@
                                             <tr>
                                                 <th>8</th>
                                                 <td>KH08 </td>
-                                                <td>Lê Hà Ngọc</td>
-                                                <td>hangoc@gmail.com</td>
+                                                <td>Lê Hà Vinh</td>
+                                                <td>havinh@gmail.com</td>
                                                 <td>873 Lê Hồng Phong, Q5, TpHCM </td>
                                                 <td>0966705392</td>
-                                                <td><a href="#"><button class="btn btn-danger">
+                                                <td><a href="#" onclick="openForm()"><button class="btn btn-danger">
                                                             <i class="glyphicon glyphicon-trash"></i>
                                                         </button></a>
-                                                    <a href="#"><button class="btn btn-primary">
+                                                    <a href="#" onclick="openFormE()"><button class="btn btn-primary">
                                                             <i class="glyphicon glyphicon-edit"> </i>
                                                         </button></a>
                                                     <a href="#"><button class="btn btn-primary inf">
@@ -342,15 +344,15 @@
 
                                             <tr>
                                                 <th>9</th>
-                                                <td>KH9 </td>
-                                                <td>Lê Thị Hằng</td>
-                                                <td>lehang@gmail.com</td>
+                                                <td>KH09 </td>
+                                                <td>Lê Duy Mạnh</td>
+                                                <td>duymanh@gmail.com</td>
                                                 <td>34/34B Nguyễn Trãi, Q1, TpHCM </td>
                                                 <td>0966705393</td>
-                                                <td><a href="#"><button class="btn btn-danger">
+                                                <td><a href="#" onclick="openForm()"><button class="btn btn-danger">
                                                             <i class="glyphicon glyphicon-trash"></i>
                                                         </button></a>
-                                                    <a href="#"><button class="btn btn-primary">
+                                                    <a href="#" onclick="openFormE()"><button class="btn btn-primary">
                                                             <i class="glyphicon glyphicon-edit"> </i>
                                                         </button></a>
                                                     <a href="#"><button class="btn btn-primary inf">
@@ -365,10 +367,10 @@
                                                 <td>duylap@gmail.com</td>
                                                 <td>730 Trần Hưng Đạo, Q5, TpHCM </td>
                                                 <td>0966705394</td>
-                                                <td><a href="#"><button class="btn btn-danger">
+                                                <td><a href="#" onclick="openForm()"><button class="btn btn-danger">
                                                             <i class="glyphicon glyphicon-trash"></i>
                                                         </button></a>
-                                                    <a href="#"><button class="btn btn-primary">
+                                                    <a href="#" onclick="openFormE()"><button class="btn btn-primary">
                                                             <i class="glyphicon glyphicon-edit"> </i>
                                                         </button></a>
                                                     <a href="#"><button class="btn btn-primary inf">
@@ -406,10 +408,10 @@
                                             <td>ngochan@gmail.com</td>
                                             <td>23/5 Nguyễn Trãi, Q5, Tp.HCM </td>
                                             <td>0966705384</td>
-                                            <td><a href="#"><button class="btn btn-danger">
+                                            <td><a href="#" onclick="openForm()"><button class="btn btn-danger">
                                                         <i class="glyphicon glyphicon-trash"></i>
                                                     </button></a>
-                                                <a href="#"><button class="btn btn-primary">
+                                                <a href="#" onclick="openFormE()"><button class="btn btn-primary">
                                                         <i class="glyphicon glyphicon-edit"></i>
                                                     </button></a>
                                                 <a href="#"><button class="btn btn-primary inf">
@@ -424,10 +426,10 @@
                                             <td>ngoclinh@gmail.com</td>
                                             <td>45 Nguyễn Cảnh Chân, Q1, Tp.HCM </td>
                                             <td>0966705385</td>
-                                            <td><a href="#"><button class="btn btn-danger">
+                                            <td><a href="#" onclick="openForm()"><button class="btn btn-danger">
                                                         <i class="glyphicon glyphicon-trash"></i>
                                                     </button></a>
-                                                <a href="#"><button class="btn btn-primary">
+                                                <a href="#" onclick="openFormE()"><button class="btn btn-primary">
                                                         <i class="glyphicon glyphicon-edit"></i>
                                                     </button></a>
                                                 <a href="#"><button class="btn btn-primary inf">
@@ -442,10 +444,10 @@
                                                 <td>minhlong@gmail.com</td>
                                                 <td>50/34 Lê Đại Hành, Q10, Tp.HCM </td>
                                                 <td>0966705386</td>
-                                                <td><a href="#"><button class="btn btn-danger">
+                                                <td><a href="#" onclick="openForm()"><button class="btn btn-danger">
                                                             <i class="glyphicon glyphicon-trash"></i>
                                                         </button></a>
-                                                    <a href="#"><button class="btn btn-primary">
+                                                    <a href="#" onclick="openFormE()"><button class="btn btn-primary">
                                                             <i class="glyphicon glyphicon-edit"></i>
                                                         </button></a>
                                                     <a href="#"><button class="btn btn-primary inf">
@@ -461,10 +463,10 @@
                                                 <td title="Số 34 Trương Định, quận 3, thành phố Hồ Chí Minh">34
                                                     Trương Định, Q3, Tp.HCM </td>
                                                 <td>0966705388</td>
-                                                <td><a href="#"><button class="btn btn-danger">
+                                                <td><a href="#" onclick="openForm()"><button class="btn btn-danger">
                                                             <i class="glyphicon glyphicon-trash"></i>
                                                         </button></a>
-                                                    <a href="#"><button class="btn btn-primary">
+                                                    <a href="#" onclick="openFormE()"><button class="btn btn-primary">
                                                             <i class="glyphicon glyphicon-edit"></i>
                                                         </button></a>
                                                     <a href="#"><button class="btn btn-primary inf">
@@ -479,10 +481,10 @@
                                                 <td>hoaithuong@gmail.com</td>
                                                 <td>227 Nguyễn Văn Cừ, Q5, TpHCM </td>
                                                 <td>0966705389</td>
-                                                <td><a href="#"><button class="btn btn-danger">
+                                                <td><a href="#" onclick="openForm()"><button class="btn btn-danger">
                                                             <i class="glyphicon glyphicon-trash"></i>
                                                         </button></a>
-                                                    <a href="#"><button class="btn btn-primary">
+                                                    <a href="#" onclick="openFormE()"><button class="btn btn-primary">
                                                             <i class="glyphicon glyphicon-edit"></i>
                                                         </button></a>
                                                     <a href="#"><button class="btn btn-primary inf">
@@ -497,13 +499,13 @@
                                                 <td>tamnguyen@gmail.com</td>
                                                 <td>32/3 Trần Bình Trọng, Q5, TpHCM </td>
                                                 <td>0966705390</td>
-                                                <td><a href="#"><button class="btn btn-danger">
+                                                <td><a href="#" onclick="openForm()"><button class="btn btn-danger">
                                                     <i class="glyphicon glyphicon-trash"></i>
                                                 </button></a>
                                             <a href="#"><button class="btn btn-primary">
                                                     <i class="glyphicon glyphicon-edit"></i>
                                                 </button></a>
-                                            <a href="#"><button class="btn btn-primary inf">
+                                            <a href="#" onclick="openFormE()"><button class="btn btn-primary inf">
                                                     <i class="glyphicon glyphicon-info-sign"></i>
                                                 </button></a></td>
                                             </tr>
@@ -515,10 +517,10 @@
                                                 <td>phanthanh@gmail.com</td>
                                                 <td>45/2 An Dương Vương, Q5, TpHCM </td>
                                                 <td>0966705391</td>
-                                                <td><a href="#"><button class="btn btn-danger">
+                                                <td><a href="#" onclick="openForm()"><button class="btn btn-danger">
                                                             <i class="glyphicon glyphicon-trash"></i>
                                                         </button></a>
-                                                    <a href="#"><button class="btn btn-primary">
+                                                    <a href="#" onclick="openFormE()"><button class="btn btn-primary">
                                                             <i class="glyphicon glyphicon-edit"> </i>
                                                         </button></a>
                                                     <a href="#"><button class="btn btn-primary inf">
@@ -532,10 +534,10 @@
                                                 <td>phanthanh@gmail.com</td>
                                                 <td>45/2 An Dương Vương, Q5, TpHCM </td>
                                                 <td>0966705391</td>
-                                                <td><a href="#"><button class="btn btn-danger">
+                                                <td><a href="#" onclick="openForm()"><button class="btn btn-danger">
                                                             <i class="glyphicon glyphicon-trash"></i>
                                                         </button></a>
-                                                    <a href="#"><button class="btn btn-primary">
+                                                    <a href="#" onclick="openFormE()"><button class="btn btn-primary">
                                                             <i class="glyphicon glyphicon-edit"> </i>
                                                         </button></a>
                                                     <a href="#"><button class="btn btn-primary inf">
@@ -550,10 +552,10 @@
                                                 <td>phanthanh@gmail.com</td>
                                                 <td>45/2 An Dương Vương, Q5, TpHCM </td>
                                                 <td>0966705391</td>
-                                                <td><a href="#"><button class="btn btn-danger">
+                                                <td><a href="#" onclick="openForm()"><button class="btn btn-danger">
                                                             <i class="glyphicon glyphicon-trash"></i>
                                                         </button></a>
-                                                    <a href="#"><button class="btn btn-primary">
+                                                    <a href="#" onclick="openFormE()"><button class="btn btn-primary">
                                                             <i class="glyphicon glyphicon-edit"> </i>
                                                         </button></a>
                                                     <a href="#"><button class="btn btn-primary inf">
@@ -569,8 +571,183 @@
                             </div>
                         </div>
 
+<!-- xu ly xoa -->
+<div class="dl" id="myForm">
+<div class="chat-popup" >
+    <div class="delete">
+        <div class="alert alert-warning">
+            <h3 style="float: right;padding-right: 2%;" onclick="closeForm()">X</h3>
+               <h3 style="padding: 1.5%;"> <strong>Warning</strong> </h3>
+
+                <div class="delete-content">
+                        <h2>Do you want to delete?</h2></div>
+       <div style=" background: #fff;right: 0; text-align: end">
+            <button  type="button" class="btn cancel btn-success" onclick="closeForm()">Close</button>
+            <button type="submit" class="btn btn-danger" onclick="closeForm()"><i class="glyphicon glyphicon-trash"></i> Delete</button>
+       
+       </div>
+       
+                   
+            
+            
+            
+        </div>
+    </div>
+  
+</div>
+</div>
+
+<script>
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      
+    }
+
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+    }
+
+      window.onclick = closeForm();
+</script>
 
 
+<!-- end xu ly xoa -->
+
+<!-- Xu ly sua -->
+<div class="mdx" id="myFormE">
+        <div class="mdx-content">
+                <div style="background-color: #1f232f; padding: 5px;color: #fff;">
+                <span class="close1" onclick="closeFormE()">X</span>
+                <h3 style="padding: 1.3%;">Edit</h3>
+            </div>
+                <div class="mdx-body">
+                   <br>
+                    <div class="row">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <label for="name">Name:</label>
+                        </div>
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                            <input type="text" class="form-control" id="name" value="Trần Ngọc Hân" autofocus  required="required"
+                                name="ten">
+                        </div>
+    
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <label for="price">Email:</label>
+                        </div>
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                            <input type="email" class="form-control" id="price" name="gia" value="ngochan@gmail.com"
+                                required="required">
+                        </div>
+    
+                    </div>
+    
+                    <div class="row">
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <label title="Password" for="price">Pass:</label>
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                <input type="password" class="form-control" id="price" name="gia" value="12345678"
+                                    required="required">
+                            </div>
+        
+                        </div>
+    
+                        <div class="row">
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                    <label title="Password" for="price">Re-Pass:</label>
+                                </div>
+                                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                    <input type="password" class="form-control" id="price" name="gia" value="12345678"
+                                        required="required">
+                                </div>
+            
+                            </div>
+    
+                            <div class="row">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <label title="Password" for="price">Phone:</label>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                        <input type="number" class="form-control" id="price" name="gia" value="0966705384"
+                                            required="required">
+                                    </div>
+                
+                                </div>
+                                <div class="row">
+                                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                            <label title="Password" for="price">Birth day:</label>
+                                        </div>
+                                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                          
+                                                <input type="text" class="form-control" id="price1" name="gia1" value="28/11/1998"
+                                                required="required">                                      
+                                        </div>
+                    
+                                    </div>
+    
+                                    <div class="row">
+                                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                                <label title="Password" for="price">Sex:</label>
+                                            </div>
+                                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                              
+                                                    
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="gt1" id="input1" value="" >
+                                                            Male
+                                                        </label>
+                                                        <label>
+                                                                <input type="radio" name="gt1" id="input" value="" checked="checked">
+                                                                Female
+                                                            </label>
+                                                    </div>
+                                                                                      
+                                            </div>
+                        
+                                        </div>
+                                <div class="row">
+                                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                            <label title="Password" for="price">Address:</label>
+                                        </div>
+                                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                          
+                                          <textarea name="" id="Address" class="form-control" rows="3" required="required" >23/5 Nguyễn Trãi, Q5, Tp.HCM</textarea>
+                                          
+                                        </div>
+                    
+                                    </div>
+    
+                   
+    
+    
+                    <div class="row" style="text-align: end; padding-right: 6%">
+                        <a><i onclick="closeFormE()" class="btn btn-primary">Close</i></a>
+                        <button type="submit" class="btn btn-success">Edit</button>
+                    </div>
+    
+                </div>
+    
+          
+        </div>
+        </div>
+        
+        <script>
+            function openFormE() {
+                document.getElementById("myFormE").style.display = "block";
+              
+            }
+        
+            function closeFormE() {
+                document.getElementById("myFormE").style.display = "none";
+            }
+        
+              window.onclick = closeForm();
+        </script>
+<!-- End xu ly sua -->
 
                         <!-- Nav tabs -->
                         <ul class="pagination " style="float: right;">
@@ -646,6 +823,132 @@
         </div>
         <!--//sidebar-menu-->
 
+        <!-- Add -->
+     
+     <!-- modal -->
+     <div class="md">
+        <div class="md-content">
+            <div style="background-color: #1f232f; padding: 5px;color: #fff;">
+            <span class="close">X</span>
+            <h3 style="padding: 1.3%;">Add </h3>
+        </div>
+            <div class="md-body">
+               <br>
+                <div class="row">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <label for="name">Name:</label>
+                    </div>
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                        <input type="text" class="form-control" id="name" placeholder="Input name......" required="required"
+                            name="ten">
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <label for="price">Email:</label>
+                    </div>
+                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                        <input type="email" class="form-control" id="price" name="gia" placeholder="input email...."
+                            required="required">
+                    </div>
+
+                </div>
+
+                <div class="row">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <label title="Password" for="price">Pass:</label>
+                        </div>
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                            <input type="password" class="form-control" id="price" name="gia" placeholder="input password...."
+                                required="required">
+                        </div>
+    
+                    </div>
+
+                    <div class="row">
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <label title="Password" for="price">Re-Pass:</label>
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                <input type="password" class="form-control" id="price" name="gia" placeholder="input password...."
+                                    required="required">
+                            </div>
+        
+                        </div>
+
+                        <div class="row">
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                    <label title="Password" for="price">Phone:</label>
+                                </div>
+                                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                    <input type="password" class="form-control" id="price" name="gia" placeholder="input your phone...."
+                                        required="required">
+                                </div>
+            
+                            </div>
+                            <div class="row">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <label title="Password" for="price">Birth day:</label>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                      
+                                            <input type="date" class="form-control" id="price" name="gia" placeholder="input password"
+                                            required="required">                                      
+                                    </div>
+                
+                                </div>
+
+                                <div class="row">
+                                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                            <label title="Password" for="price">Sex:</label>
+                                        </div>
+                                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                          
+                                                
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="gt" id="input" value="" checked="checked">
+                                                        Male
+                                                    </label>
+                                                    <label>
+                                                            <input type="radio" name="gt" id="input" value="" >
+                                                            Female
+                                                        </label>
+                                                </div>
+                                                                                  
+                                        </div>
+                    
+                                    </div>
+                            <div class="row">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <label title="Password" for="price">Address:</label>
+                                    </div>
+                                    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                      
+                                      <textarea name="" id="input" class="form-control" rows="3" required="required"></textarea>
+                                      
+                                    </div>
+                
+                                </div>
+
+               
+
+
+                <div class="row" style="text-align: end; padding-right: 6%">
+                    <a><i id="dong" class="btn btn-primary">Close</i></a>
+                    <button type="submit" class="btn btn-success">Add</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+<!-- end Add -->
         <div class="clearfix"></div>
     </div>
 
@@ -690,6 +993,42 @@
             }
         }
     </script>
+
+<!-- add -->
+<script>
+    var md = document.getElementsByClassName("md"),
+        // mdx = document.getElementsByClassName("mdx"),
+        btn = document.getElementById('btn'),
+        close = document.getElementsByClassName('close'),
+        dong = document.getElementById('dong');
+        // xoa = document.getElementById('xoa');
+    btn.onclick = function () {
+
+        md[0].style.display = 'block';
+    }
+
+    // xoa.onclick = function () {
+    //     mdx[0].style.display = 'block';
+    // }
+    close[0].onclick = function () {
+        md[0].style.display = 'none';
+
+    }
+    dong.onclick = function () {
+        md[0].style.display = 'none';
+
+
+    }
+
+    window.onclick = function (e) {
+        if (e.target == md[0]) {
+            md[0].style.display = 'none';
+
+
+        }
+    }
+</script>
+
 
     <script>
         function openCity(evt, cityName) {
