@@ -618,7 +618,7 @@ li.dropdown.note {
 	    cursor: pointer;
 }
 li.dropdown.note a {
-    padding: 1.13em 1.85em;
+    padding: 1.13em 2.4em;
 	    display: block;
 }
 li.dropdown.note:hover {
@@ -8357,7 +8357,7 @@ footer  p a:hover ,.footer p a:hover{
     height: 0;
     margin: 0.5rem 0;
     overflow: hidden;
-    border-top: 1px solid #e9ecef;
+    border-top: 1px solid #d1dadc;
 }
 
 .fa-cog{
@@ -8409,10 +8409,13 @@ h1{
 }
 
 
-	.sr, .addbtn{
+	.sr, .add{
 		position: unset !important;
 	}
 
 	.inf{
 		background: #00c6d7 !important;
 	}
+
+	.glyphicon {
+		 position: unset !important; }
